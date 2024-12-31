@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masini de curse</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bun venit la Masini de curse</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showSection('acasa')">Acasă</a></li>
+            <li><a href="#" onclick="showSection('galerie')">Galerie</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="acasa" class="page active">
+            <h2>Galerie Mașini de Curse</h2>
+            <div class="galerie-masini">
+                <div class="masina">
+                    <img src="https://images.unsplash.com/photo-1553440569-bcc63803a83d" alt="Formula 1">
+                    <p>Formula 1 - Speed Master</p>
+                </div>
+                <div class="masina">
+                    <img src="https://images.unsplash.com/photo-1494905998402-395d579af36f" alt="GT Racing">
+                    <p>GT Racing Pro</p>
+                </div>
+                <div class="masina">
+                    <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98" alt="Rally">
+                    <p>Rally Champion</p>
+                </div>
+                <div class="masina">
+                    <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888" alt="NASCAR">
+                    <p>NASCAR Elite</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galerie" class="page">
+            <h2>Alte Imagini</h2>
+            <p>Galerie suplimentară în curând...</p>
+        </section>
+
+        <section id="contact" class="page">
+            <h2>Contact</h2>
+            <div class="contact-container">
+                <div class="imagine-container">
+                    <img src="poza_Eric_bolnavior.jpeg" alt="Eric Bolnavior" class="poza-eric">
+                    <p class="descriere">Eric Bolnavior - Pasionat de mașini de curse</p>
+                </div>
+                <div class="imagine-container">
+                    <img src="eric2.jpeg" alt="Eric Pasionat de mașini de curse" class="poza-eric">
+                    <p class="descriere">Eric gamer cool</p>
+                </div>
+            </div>
+        </section>
+               
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Masini de curse. Toate drepturile rezervate.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.page').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
